@@ -11,7 +11,7 @@
 	"TECH":["tech", "internet", "gadgets", "wireless", "apple", "social-media", "security", "open-source", "gaming"],
 	"POLITICS":["politics", "white-house", "congress", "us-government", "the-courts", "politics-press-releases", "elections"],
 	"SCIENCE":["science", "weather", "astronomy", "animal-pets", "biotech", "energy", "green"],
-	"HEALTH":["health", "sexual-health", "medications-drugs", "parenting-kids", "seniors-aging", "diseases-conditions", "vitality"]
+	"HEALTH":["health", "sexual-health", "medications-drugs", "parenting-kids", "seniors-aging", "diseases-conditions"]
 },
 "sentence-minimum-length":15,
 "extracted_data_suffix":"revnews",
