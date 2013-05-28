@@ -135,10 +135,14 @@ public abstract class RssScraper {
                         break;  // stop trying on success
 
                     } catch (IOException e) {
-                        if (i < 2) continue;  // try again!
-                        logger.error("fetchData(): Failed to download: {}_{}",
-                            categoryName, feedName);
-                        e.printStackTrace();
+                    	if (i < 2) {
+                        	continue;  // try again!
+                        } else {
+                        	//skip this one and continue with next
+                        	logger.info("fetchData(): Failed to download: {}_{}",
+                                    categoryName, feedName);
+                        	break;
+                        }
                     }
                 }
             }
