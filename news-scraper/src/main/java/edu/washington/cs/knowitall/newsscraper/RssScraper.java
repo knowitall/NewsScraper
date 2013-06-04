@@ -138,9 +138,9 @@ public abstract class RssScraper {
                     	if (i < 2) {
                         	continue;  // try again!
                         } else {
-                        	//skip this one and continue with next
                         	logger.info("fetchData(): Failed to download: {}_{}",
                                     categoryName, feedName);
+                        	e.printStackTrace();
                         	break;
                         }
                     }
