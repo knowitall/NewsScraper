@@ -20,6 +20,7 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
 
+import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.slf4j.Logger;
@@ -118,6 +119,7 @@ public abstract class RssScraper {
                 for (int i = 0; i < 3; i++) {
                     try {
                         String url = constructUrl(categoryName, feedName);
+
                         Document doc = Jsoup.connect(url).get();
 
                         // write fetched xml to local data
@@ -135,12 +137,21 @@ public abstract class RssScraper {
                         break;  // stop trying on success
 
                     } catch (IOException e) {
+<<<<<<< HEAD
                     	if (i < 2) {
                         	continue;  // try again!
                         } else {
                         	logger.info("fetchData(): Failed to download: {}_{}",
                                     categoryName, feedName);
                         	e.printStackTrace();
+=======
+                        if (i < 2) {
+                        	continue;  // try again!
+                        } else {
+                        	//skip this one and continue on next
+                            logger.info("fetchData(): Failed to download: {}_{}",
+                                    categoryName, feedName);
+>>>>>>> a344b5ca2642c11b0c9d937897b3b88e883e7e53
                         	break;
                         }
                     }
