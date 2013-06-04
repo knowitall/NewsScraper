@@ -63,7 +63,7 @@ public class NewsScraperMain {
      * @mofidies calendar, options.
      * @effects initializes them.
      */
-    private static void initializeVars() {
+    public static void initializeVars() {
         calendar = Calendar.getInstance();
         options = new Options();
     }
@@ -172,7 +172,7 @@ public class NewsScraperMain {
      * line args.
      * @return a Config object
      */
-    private static Config getConfig() {
+    public static Config getConfig() {
         Config retConfig = null;
 
         if (cmd.hasOption(USE_GOOGLE_RSS)) {
